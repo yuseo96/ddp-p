@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KRDS themplate</title>
+    <title>DDP</title>
     <meta property="og:type" content="website" />
     <meta property="og:title" content="페이지 제목" />
     <meta property="og:description" content="페이지 설명" />
@@ -15,34 +15,38 @@
     <meta name="twitter:image" content="http://www.mysite.com/article/article1.html" />
     <meta name="twitter:domain" content="사이트 명" />
     <link rel="shortcut icon" href="http://www.mysite.com/favicon.ico" />
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+    <!-- css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.css" />
     <link rel="stylesheet" href="../resources/css/pattern_css.css" />
+    <!-- js -->
+    <!-- 제이쿼리 cdn은 가장 위에 넣어야함 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script defer src="../resources/js/include.js"></script>
-    <script defer src="../resources/js/ui-pattern.js"></script>
-    <script defer src="../resources/js/ui-swiper.js"></script>
+    <script defer src="../resources/js/pattern/include.js"></script>
+    <script defer src="../resources/js/pattern/ui-pattern-script.js"></script>
+    <script defer src="../resources/js/pattern/ui-swiper.js"></script>
   </head>
   <body>
-    <div id="skip-nav">
+    <div id="skip-nav" class="type1">
       <a href="#gnb">메뉴 바로가기</a>
       <a href="#container">본문 바로가기</a>
     </div>
     <div id="wrap">
+      <!-- active 추가시 depth2 활성화 -->
       <header id="header" class="">
         <div class="inner">
           <h1 id="logo">
             <a href="#">
-              <span>logo</span>
+              <span>DDP</span>
             </a>
           </h1>
           <nav id="gnb" class="gnb">
             <ul class="gnb__depth1">
               <li>
                 <a href="#">
-                  <span>menu1</span>
+                  <span>DDP 안내</span>
                 </a>
                 <ul class="gnb__depth2">
                   <li><a href="#">menu1-1</a></li>
@@ -52,7 +56,7 @@
                 </ul>
               </li>
               <li>
-                <a href="#"><span>menu2</span></a>
+                <a href="#"><span>프로그램</span></a>
                 <ul class="gnb__depth2">
                   <li><a href="#">menu2-1</a></li>
                   <li><a href="#">menu2-2</a></li>
@@ -61,7 +65,7 @@
                 </ul>
               </li>
               <li>
-                <a href="#"><span>menu3</span></a>
+                <a href="#"><span>공간안내</span></a>
                 <ul class="gnb__depth2">
                   <li><a href="#">menu3-1</a></li>
                   <li><a href="#">menu3-2</a></li>
@@ -70,7 +74,7 @@
                 </ul>
               </li>
               <li>
-                <a href="#"><span>menu4</span></a>
+                <a href="#"><span>고객지원</span></a>
                 <ul class="gnb__depth2">
                   <li><a href="#">menu4-1</a></li>
                   <li><a href="#">menu4-2</a></li>
@@ -97,7 +101,7 @@
             </button>
           </div>
         </div>
-        <!-- active 추가시 활성화 -->
+        <!-- class에 active 추가시 활성화 -->
         <nav id="nav-all" class="">
           <ul class="gnb__depth1">
             <li>
@@ -145,202 +149,302 @@
           </button>
         </nav>
       </header>
-      <div class="intro">
-        <!-- Slider main container -->
-        <div class="swiper slide-intro">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <a href="#">
-                <picture>
-                  <source srcset="https://images.unsplash.com/photo-1515002246390-7bf7e8f87b54?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 1024px)" />
-                  <source srcset="https://images.unsplash.com/photo-1511275539165-cc46b1ee89bf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 600px)" />
-                  <source srcset="https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                  <img src="https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Flowers" />
-                </picture>
-                <div class="text-area">
-                  <div class="inner">
-                    <strong class="text-area__tit">슬라이드 제목</strong>
-                    <p class="text-area__cont">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <span class="text-area__goto text-area__goto--hidden">바로가기</span>
-                  </div>
+
+      <main id="container">
+        <section class="main_img">
+          <h2>DDP, SEOUL</h2>
+        </section>
+
+        <section class="sec-g sec-introduce">
+          <div class="left_box inner">
+            <div class="col_wrap">
+              <div class="col">
+                <div class="image">
+                  <img src="../resources/images/pattern/common/glass_cube_object_converted.png" alt="" />
+                  <!-- <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+                <dotlottie-player src="https://lottie.host/df14d362-ed38-43d6-a8ea-bebc3a15a03a/QvM6CaeZfG.json" background="transparent" speed="0.5" style="width: 300px; height: 300px" loop autoplay></dotlottie-player> -->
                 </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#">
-                <picture>
-                  <source srcset="https://images.unsplash.com/photo-1515002246390-7bf7e8f87b54?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 1024px)" />
-                  <source srcset="https://images.unsplash.com/photo-1511275539165-cc46b1ee89bf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 600px)" />
-                  <source srcset="https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                  <img src="https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Flowers" />
-                </picture>
-                <div class="text-area">
-                  <div class="inner">
-                    <strong class="text-area__tit">슬라이드 제목</strong>
-                    <p class="text-area__cont">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <span class="text-area__goto text-area__goto--hidden">바로가기</span>
-                  </div>
+                <div class="image">
+                  <img src="../resources/images/pattern/common/glass_cube_object_converted.png" alt="" />
+                  <!-- <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+                <dotlottie-player src="https://lottie.host/5f6f4aaf-8509-482d-97a2-9f7ae8f3985b/F8qRF77Rpu.json" background="transparent" speed="0.5" style="width: 300px; height: 300px" loop autoplay></dotlottie-player> -->
                 </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#">
-                <picture>
-                  <source srcset="https://images.unsplash.com/photo-1515002246390-7bf7e8f87b54?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 1024px)" />
-                  <source srcset="https://images.unsplash.com/photo-1511275539165-cc46b1ee89bf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 600px)" />
-                  <source srcset="https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                  <img src="https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Flowers" />
-                </picture>
-                <div class="text-area">
-                  <div class="inner">
-                    <strong class="text-area__tit">슬라이드 제목</strong>
-                    <p class="text-area__cont">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <span class="text-area__goto text-area__goto--hidden">바로가기</span>
-                  </div>
+                <div class="txt">Located in Seoul’s Dongdaemun, DDP is a multi-functional cultural space, hosting exhibitions, fashion shows, product launches, and design experiences, making it a landmark that fosters creativity and cultural exchange in the heart of the city and a hub of design and innovation.</div>
+                <div class="image">
+                  <img src="../resources/images/pattern/common/glass_cube_object_converted.png" alt="" />
+                  <!-- <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+                <dotlottie-player src="https://lottie.host/4acdbfa9-4ff9-426b-8507-7e667a2a9704/znjk5ppNP5.json" background="transparent" speed="0.5" style="width: 300px; height: 300px" loop autoplay></dotlottie-player> -->
                 </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#">
-                <picture>
-                  <source srcset="https://images.unsplash.com/photo-1515002246390-7bf7e8f87b54?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 1024px)" />
-                  <source srcset="https://images.unsplash.com/photo-1511275539165-cc46b1ee89bf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 600px)" />
-                  <source srcset="https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                  <img src="https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Flowers" />
-                </picture>
-                <div class="text-area">
-                  <div class="inner">
-                    <strong class="text-area__tit">슬라이드 제목</strong>
-                    <p class="text-area__cont">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <span class="text-area__goto text-area__goto--hidden">바로가기</span>
-                  </div>
+                <div class="txt">Located in Seoul’s Dongdaemun, DDP is a multi-functional cultural space, hosting exhibitions, fashion shows, product launches, and design experiences, making it a landmark that fosters creativity and cultural exchange in the heart of the city and a hub of design and innovation.</div>
+              </div>
+              <div class="col">
+                <div class="image">
+                  <img src="../resources/images/pattern/common/glass_cube_object_converted.png" alt="" />
+                  <!-- <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+                <dotlottie-player src="https://lottie.host/df14d362-ed38-43d6-a8ea-bebc3a15a03a/QvM6CaeZfG.json" background="transparent" speed="0.5" style="width: 300px; height: 300px" loop autoplay></dotlottie-player> -->
                 </div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#">
-                <picture>
-                  <source srcset="https://images.unsplash.com/photo-1515002246390-7bf7e8f87b54?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 1024px)" />
-                  <source srcset="https://images.unsplash.com/photo-1511275539165-cc46b1ee89bf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 600px)" />
-                  <source srcset="https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                  <img src="https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Flowers" />
-                </picture>
-                <div class="text-area">
-                  <div class="inner">
-                    <strong class="text-area__tit">슬라이드 제목</strong>
-                    <p class="text-area__cont">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <span class="text-area__goto text-area__goto--hidden">바로가기</span>
-                  </div>
+                <div class="image">
+                  <img src="../resources/images/pattern/common/glass_cube_object_converted.png" alt="" />
+                  <!-- <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+                <dotlottie-player src="https://lottie.host/5f6f4aaf-8509-482d-97a2-9f7ae8f3985b/F8qRF77Rpu.json" background="transparent" speed="0.5" style="width: 300px; height: 300px" loop autoplay></dotlottie-player> -->
                 </div>
-              </a>
+                <div class="txt">Located in Seoul’s Dongdaemun, DDP is a multi-functional cultural space, hosting exhibitions, fashion shows, product launches, and design experiences, making it a landmark that fosters creativity and cultural exchange in the heart of the city and a hub of design and innovation.</div>
+                <div class="image">
+                  <img src="../resources/images/pattern/common/glass_cube_object_converted.png" alt="" />
+                  <!-- <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+                <dotlottie-player src="https://lottie.host/4acdbfa9-4ff9-426b-8507-7e667a2a9704/znjk5ppNP5.json" background="transparent" speed="0.5" style="width: 300px; height: 300px" loop autoplay></dotlottie-player> -->
+                </div>
+                <div class="txt">Located in Seoul’s Dongdaemun, DDP is a multi-functional cultural space, hosting exhibitions, fashion shows, product launches, and design experiences, making it a landmark that fosters creativity and cultural exchange in the heart of the city and a hub of design and innovation.</div>
+              </div>
             </div>
           </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
-
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-      </div>
-      <main id="container">
-        <!-- 스튜디오 섹션 -->
-        <section class="sec-g sec-studio">
+          <div class="right_box inner">
+            <div class="col_wrap">
+              <div class="col">
+                <div class="image">
+                  <img src="../resources/images/pattern/common/glass_cube_object_converted.png" alt="" />
+                  <!-- <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+                <dotlottie-player src="https://lottie.host/7cfdb7f3-8296-45de-b929-4916017f19db/aIaVCQ6qC7.json" background="transparent" speed="1" loop autoplay></dotlottie-player><img src="" alt="" /> -->
+                </div>
+                <div class="image">
+                  <img src="../resources/images/pattern/common/glass_cube_object_converted.png" alt="" />
+                  <!-- <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+                <dotlottie-player src="https://lottie.host/b9941cb2-b8c3-4652-8b8d-8787cdc7a6a6/Q5jq5S7tZh.json" background="transparent" speed="1" loop autoplay></dotlottie-player><img src="" alt="" /> -->
+                </div>
+                <div class="txt">DDP는 서울 동대문에 위치한 복합 문화 공간으로, 전시, 패션쇼, 신제품 발표회, 디자인 체험 등 다양한 행사를 통해 창의성과 문화 교류를 촉진하는 서울의 대표적 랜드마크입니다. 디자인과 문화의 중심지로 자리잡고 있습니다.</div>
+                <div class="image"><img src="../resources/images/pattern/common/glass_cube_object_converted.png" alt="" /></div>
+                <div class="txt">DDP는 서울 동대문에 위치한 복합 문화 공간으로, 전시, 패션쇼, 신제품 발표회, 디자인 체험 등 다양한 행사를 통해 창의성과 문화 교류를 촉진하는 서울의 대표적 랜드마크입니다. 디자인과 문화의 중심지로 자리잡고 있습니다.</div>
+              </div>
+              <div class="col">
+                <div class="image">
+                  <img src="../resources/images/pattern/common/glass_cube_object_converted.png" alt="" />
+                  <!-- <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+                <dotlottie-player src="https://lottie.host/7cfdb7f3-8296-45de-b929-4916017f19db/aIaVCQ6qC7.json" background="transparent" speed="1" loop autoplay></dotlottie-player><img src="" alt="" /> -->
+                </div>
+                <div class="image">
+                  <!-- <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+                <dotlottie-player src="https://lottie.host/b9941cb2-b8c3-4652-8b8d-8787cdc7a6a6/Q5jq5S7tZh.json" background="transparent" speed="1" loop autoplay></dotlottie-player><img src="" alt="" /> -->
+                </div>
+                <div class="txt">DDP는 서울 동대문에 위치한 복합 문화 공간으로, 전시, 패션쇼, 신제품 발표회, 디자인 체험 등 다양한 행사를 통해 창의성과 문화 교류를 촉진하는 서울의 대표적 랜드마크입니다. 디자인과 문화의 중심지로 자리잡고 있습니다.</div>
+                <div class="image"><img src="../resources/images/pattern/common/glass_cube_object_converted.png" alt="" /></div>
+                <div class="txt">DDP는 서울 동대문에 위치한 복합 문화 공간으로, 전시, 패션쇼, 신제품 발표회, 디자인 체험 등 다양한 행사를 통해 창의성과 문화 교류를 촉진하는 서울의 대표적 랜드마크입니다. 디자인과 문화의 중심지로 자리잡고 있습니다.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="content" class="sec-g sec_exhibition">
           <div class="inner">
-            <h2 class="sec-g__tit">섹션 타이틀</h2>
-            <p class="sec-g__desc">섹션 타이틀</p>
-            <div class="sec-g__cont">
-              <div class="swiper slide-studio">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <a href="#">
-                      <img src="https://www.wooriam.kr/upload/public/board/LnMCTNmG6JaCGQHJ/tb5eAihFnIe9tAmJ.jpg" alt="" />
-                      <strong>미국 공모주 정말 쉽게 받는 방법</strong>
-                      <em>2024.10.16</em>
-                    </a>
+            <div class="exhibition">
+              <div class="exhibition_wrap">
+                <div class="ex_top">
+                  <span>EXHIBITIONS</span>
+                  <span>AND</span>
+                </div>
+                <div class="ex_box">
+                  <div class="ex_box_txt">
+                    <h3>
+                      연간 천만명 이상이 방문하는 <br />
+                      <em>
+                        서울의 디자인 성지
+                        <br />
+                        매년 100건 이상
+                      </em>
+                      의
+                      <br />
+                      전시, 행사 개최
+                    </h3>
                   </div>
-                  <div class="swiper-slide">
-                    <a href="#">
-                      <img src="https://www.wooriam.kr/upload/public/board/LnMCTNmG6JaCGQHJ/tb5eAihFnIe9tAmJ.jpg" alt="" />
-                      <strong>미국 공모주 정말 쉽게 받는 방법</strong>
-                      <em>2024.10.16</em>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#">
-                      <img src="https://www.wooriam.kr/upload/public/board/LnMCTNmG6JaCGQHJ/tb5eAihFnIe9tAmJ.jpg" alt="" />
-                      <strong>미국 공모주 정말 쉽게 받는 방법</strong>
-                      <em>2024.10.16</em>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#">
-                      <img src="https://www.wooriam.kr/upload/public/board/LnMCTNmG6JaCGQHJ/tb5eAihFnIe9tAmJ.jpg" alt="" />
-                      <strong>미국 공모주 정말 쉽게 받는 방법</strong>
-                      <em>2024.10.16</em>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#">
-                      <img src="https://www.wooriam.kr/upload/public/board/LnMCTNmG6JaCGQHJ/tb5eAihFnIe9tAmJ.jpg" alt="" />
-                      <strong>미국 공모주 정말 쉽게 받는 방법</strong>
-                      <em>2024.10.16</em>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#">
-                      <img src="https://www.wooriam.kr/upload/public/board/LnMCTNmG6JaCGQHJ/tb5eAihFnIe9tAmJ.jpg" alt="" />
-                      <strong>미국 공모주 정말 쉽게 받는 방법</strong>
-                      <em>2024.10.16</em>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#">
-                      <img src="https://www.wooriam.kr/upload/public/board/LnMCTNmG6JaCGQHJ/tb5eAihFnIe9tAmJ.jpg" alt="" />
-                      <strong>미국 공모주 정말 쉽게 받는 방법</strong>
-                      <em>2024.10.16</em>
-                    </a>
-                  </div>
+                  <button class="ex_view">VIEW</button>
+                </div>
+                <div class="ex_cont">
+                  <ul class="ex_cont1">
+                    <li>
+                      <img src="../resources/images/pattern/common/ex_img1.jpg" alt="DDP 오픈큐레이팅" />
+                      <p>DDP 오픈큐레이팅 vol.35 <칼레이도>展</p>
+                      <p class="date">2024-11-05 ~ 2024-12-08</p>
+                    </li>
+                    <li>
+                      <img src="../resources/images/pattern/common/ex_img2.jpg" alt="서울디자인어워드 2024" />
+                      <p>「서울디자인어워드 2024」 데이 (콘퍼런스 및 시상식, 시민투표) 안내</p>
+                      <p class="date">2024-10-25 ~ 2024-10-27</p>
+                    </li>
+                    <li>
+                      <img src="../resources/images/pattern/common/ex_img3.jpg" alt="DDP 루프탑 투어" />
+                      <p>[DDP 루프탑 투어] 사전예약 오픈</p>
+                      <p class="date">2024-10-24 ~ 2024-10-27</p>
+                    </li>
+                    <li>
+                      <img src="../resources/images/pattern/common/ex_img4.jpg" alt="서울디자인 2024" />
+                      <p>DDP 서울디자인 2024</p>
+                      <p class="date">2024-10-17 ~ 2024-10-27</p>
+                    </li>
+                    <li>
+                      <img src="../resources/images/pattern/common/ex_img5.jpg" alt="공산품미학" />
+                      <p>공산품미학</p>
+                      <p class="date">2024-10-15 ~ 2025-03-03</p>
+                    </li>
+                    <li>
+                      <img src="../resources/images/pattern/common/ex_img6.jpg" alt="아퍼쳐" />
+                      <p>야외전시 [아퍼쳐(APERTURE) ; Atelier SISU]</p>
+                      <p class="date">2024-08-29 ~ 2024-09-08</p>
+                    </li>
+                    <li>
+                      <img src="../resources/images/pattern/common/ex_img7.jpg" alt="2024 컬리뷰티페스타" />
+                      <p>컬리뷰티페스타 2024</p>
+                      <p class="date">2024-10-10 ~ 2024-10-13</p>
+                    </li>
+                  </ul>
+                  <ul class="ex_cont2">
+                    <li>
+                      <img src="../resources/images/pattern/common/ex_img8.jpg" alt="2024 가을 퓨처로그" />
+                      <p>서울라이트 DDP 2024 가을 “퓨처로그 Future Log”</p>
+                      <p class="date">2024-08-29 ~ 2024-09-08</p>
+                    </li>
+                    <li>
+                      <img src="../resources/images/pattern/common/ex_img9.jpg" alt="2024 서울뷰티위크" />
+                      <p>2024 DDP 서울뷰티위크</p>
+                      <p class="date">2024-10-01 ~ 2024-10-03</p>
+                    </li>
+                    <li>
+                      <img src="../resources/images/pattern/common/ex_img10.jpg" alt="DDP 디자인 쇼윈도" />
+                      <p>DDP 디자인 쇼윈도</p>
+                      <p class="date">2024-09-30 ~ 2024-12-15</p>
+                    </li>
+                    <li>
+                      <img src="../resources/images/pattern/common/ex_img11.jpg" alt="문자의 다양한 형태들 " />
+                      <p>DDP 오픈큐레이팅 vol.34 [문자의 다양한 형태들]展</p>
+                      <p class="date">2024-09-27 ~ 2024-10-26</p>
+                    </li>
+                    <li>
+                      <img src="../resources/images/pattern/common/ex_img12.jpg" alt="LOOK PLAY KEEP" />
+                      <p>LOOK PLAY KEEP.</p>
+                      <p class="date">2024-09-27 ~ 2025-01-31</p>
+                    </li>
+                    <li>
+                      <img src="../resources/images/pattern/common/ex_img13.jpg" alt="Beauty of korea" />
+                      <p>Beauty of Korea</p>
+                      <p class="date">2024-09-13 ~ 2024-12-01</p>
+                    </li>
+                    <li>
+                      <img src="../resources/images/pattern/common/ex_img14.jpg" alt="기억의 순환" />
+                      <p>미나 페르호넨 디자인 여정: 기억의 순환</p>
+                      <p class="date">2024-09-12 ~ 2025-02-06</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="ex_bottom">
+                  <span>EVENT</span>
+                  <span>SCHEDULE</span>
                 </div>
               </div>
             </div>
-            <a href="#" class="sec-g__more">더보기</a>
           </div>
         </section>
-
-        <!-- ㄴㅠㅅㅡㅅㅔㄱㅅㅕㄴ -->
-        <section class="sec-g sec-news bg-gray">
-          <div class="inner">
-            <h2 class="sec-g__tit">섹션 타이틀</h2>
-            <p class="sec-g__desc">섹션 타이틀</p>
-            <div class="sec-g__cont">컨텐츠</div>
-            <a href="#" class="sec-g__more">더보기</a>
+        <section class="sec-g sec-amazing amazing">
+          <div class="amazing_logo">
+            <img src="../resources/images/pattern/common/amazing_tomorrow.png" alt="amazing_logo" />
           </div>
+          <div class="amazing_txt">슬로건 <em>‘어메이징 투모로우(Amazing Tomorrow)’</em> 는 우주선을 닮은 미래지향적 건물 디자인, 첨단 시공 기술, 콘텐츠로 무장한 DDP를 통해 앞으로 찾아올 시민, 외국인을 놀라게 하는 경험을 전하겠다는 의지가 담겼습니다.</div>
         </section>
-
-        <!-- ㄴㅠㅅㅡㅅㅔㄱㅅㅕㄴ -->
-        <section class="sec-g sec-about">
-          <div class="inner">
-            <h2 class="sec-g__tit">섹션 타이틀</h2>
-            <p class="sec-g__desc">섹션 타이틀</p>
-            <div class="sec-g__cont">컨텐츠</div>
-            <a href="#" class="sec-g__more">더보기</a>
+        <section class="sec-g sec-news news">
+          <div class="news_top">
+            <div class="news_top_txt">See our latest news</div>
+            <button class="news_view">VIEW</button>
           </div>
-        </section>
-
-        <!-- ㄴㅠㅅㅡㅅㅔㄱㅅㅕㄴ -->
-        <section class="sec-g sec-business bg-gray">
-          <div class="inner">
-            <h2 class="sec-g__tit">섹션 타이틀</h2>
-            <p class="sec-g__desc">섹션 타이틀</p>
-            <div class="sec-g__cont">컨텐츠</div>
-            <a href="#" class="sec-g__more">더보기</a>
+          <div class="news_content">
+            <div class="swiper slide-studio">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="news_date">
+                    <div class="new">NEW</div>
+                    <em>Sep 2, 2024</em>
+                  </div>
+                  <a href="#">
+                    <img src="../resources/images/pattern/common/news_1.png" alt="news" />
+                    <strong>DDP 대관 뉴스레터 : 2025년 아트홀·야외공간 정기대관</strong>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <div class="news_date">
+                    <div class="new">NEW</div>
+                    <em>Sep 2, 2024</em>
+                  </div>
+                  <a href="#">
+                    <img src="../resources/images/pattern/common/news_2.png" alt="news" />
+                    <strong>서울디자인어워드 2024 TOP 10 및 컨퍼런스 안내</strong>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <div class="news_date">
+                    <div class="new">NEW</div>
+                    <em>Sep 2, 2024</em>
+                  </div>
+                  <a href="#">
+                    <img src="../resources/images/pattern/common/news_3.png" alt="news" />
+                    <strong>2024 중소기업 산업디자인 개발 지원사업 전시 안내</strong>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <div class="news_date">
+                    <div class="new">NEW</div>
+                    <em>Sep 2, 2024</em>
+                  </div>
+                  <a href="#">
+                    <img src="../resources/images/pattern/common/news_4.png" alt="news" />
+                    <strong>DDP디자인론칭페어 (10.17~10.27) 곧 만나보세요!</strong>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <div class="news_date">
+                    <div class="new">NEW</div>
+                    <em>Sep 2, 2024</em>
+                  </div>
+                  <a href="#">
+                    <img src="../resources/images/pattern/common/news_4.png" alt="news" />
+                    <strong>[DDP 10월 뉴스레터] 이번 가을, 변화하는 디자인을 만나보세요!</strong>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
-      <footer id="footer" include-html="./layout/footer.html"></footer>
+
+      <footer id="footer">
+        <div class="footer_sec1">
+          <div class="about">ABOUT</div>
+          <span>LET'S</span>
+          <span>TALK</span>
+          <ul class="sns">
+            <li class="facebook"><img src="" alt="" /></li>
+            <li class="instagram"><img src="" alt="" /></li>
+            <li class="youtube"><img src="" alt="" /></li>
+            <li class="blog"><img src="" alt="" /></li>
+          </ul>
+        </div>
+        <div class="footer_sec2">
+          <ul class="aside">
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">이메일무단수집거부</a></li>
+            <li><a href="#">행정서비스 현장</a></li>
+            <li><a href="#">고객지원</a></li>
+            <li><a href="#">사이트맵</a></li>
+          </ul>
+          <div class="Operating">
+            <p>운영시간 안내</p>
+            <p>10:00 ~ 20:00 (프로그램에 따라 일부 구간 탄력 운영)</p>
+            <p>1월 1일/설날, 추석 당일 휴무</p>
+            <button>뉴스레터 구독신청</button>
+          </div>
+          <address>
+            <p>[04566] 서울시 중구 을지로 281</p>
+            <p>대표이사 : 이경돈</p>
+            <p>대표전화 02-2153-0000</p>
+            <p>사업자번호 : 201-82-08464</p>
+            <p>COPYRIGHT ⓒ 2021 DDP. ALL RIGHTS RESERVED.</p>
+          </address>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

@@ -1,10 +1,10 @@
-// 599px 이하일 경우
+// mobile
 @mixin mobile {
   @media (max-width: ($breakpoint-sm - 1px)) {
     @content;
   }
 }
-// 600px 이상일 경우
+// tablet
 @mixin mobileMore {
   @media (min-width: $breakpoint-sm) {
     @content;
@@ -24,6 +24,7 @@
   }
 }
 
+// desktop
 @mixin tabletMore {
   @media (min-width: $breakpoint-md) {
     @content;
